@@ -1,17 +1,21 @@
 package coord;
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class Coordinate {
 
-    private Points points = new Points();
+    private Points points;
+    private Shape shape;
 
-    public void addPoints(String stringPoints){
-        Arrays.stream(stringPoints.split("-"))
-                .forEach(str -> points.addPoint(Point.getPoint(str)));
+    public Coordinate() {
+        points = new Points();
     }
 
-    public Points getPoints() {
-        return points;
+    public Coordinate(String stringPoints) {
+       points = Points.getPoints(stringPoints);
+       shape = ShapeFactory.getShape(points);
     }
+
+
 }

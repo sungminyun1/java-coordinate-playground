@@ -17,13 +17,18 @@ class CoordinateTest {
     void addPoints(){
         Coordinate coordinate = new Coordinate();
 
-        coordinate.addPoints("(10,10)-(14,15)");
-        Points points = coordinate.getPoints();
+        Points points = Points.getPoints("(10,10)-(14,15)");
 
         List<Point> list = new ArrayList<>();
         list.add(Point.getPoint(10,10));
         list.add(Point.getPoint("(14,15)"));
 
         assertThat(points).isEqualTo(new Points(list));
+    }
+
+    @DisplayName("Line 생성")
+    @Test
+    void createLine(){
+        assertThat(ShapeFactory.getShape(Points.getPoints("(10,10)-(14,15)"))).isInstanceOf(Line.class);
     }
 }
