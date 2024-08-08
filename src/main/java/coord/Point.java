@@ -24,12 +24,6 @@ public class Point {
         this.y = checkPoint(y);
     }
 
-    private Point(String pointString) {
-        List<Integer> points = parseString(pointString);
-        this.x = points.get(0);
-        this.y = points.get(1);
-    }
-
     private static List<Integer> parseString(String pointString) {
         return Arrays.stream(pointString.substring(1, pointString.length() - 1)
                 .split(","))
