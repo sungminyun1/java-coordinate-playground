@@ -24,3 +24,8 @@ git checkout main // 기본 브랜치가 main인 경우
 git checkout -b 브랜치이름
 ex) git checkout -b apply-feedback
 ```
+---
+# 기능 리스트
+- [ ] 좌표 정보를 입력받는다
+- [ ] 좌표의 최대 크기는 24까지이다
+- [ ] 좌표값이 두개라면 좌표를 잇는 직선의 길이를 구한다
