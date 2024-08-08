@@ -36,6 +36,14 @@ public class Point {
         return p;
     }
 
+    public int calcWidth(Point end){
+        return x - end.x;
+    }
+
+    public int calcHeight(Point end){
+        return y - end.y;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

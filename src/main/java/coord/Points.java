@@ -31,6 +31,10 @@ public class Points {
         return points.size();
     }
 
+    public Point getPoint(int index){
+        return points.get(index);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
